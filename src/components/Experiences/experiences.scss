@@ -1,0 +1,67 @@
+.experience_container {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  background-color: var(--bg-color);
+  padding: 2.5rem 5rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
+  cursor: default;
+
+  &:hover {
+    background-color: transparent;
+    border-color: var(--primary-color);
+  }
+  .experience_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 1rem;
+    .experience_details {
+display: flex;
+align-items: center;
+div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+      .icons {
+        margin-right: 0.5rem;
+        color: var(--primary-color);
+      }
+    }
+  }
+  h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+  }
+}
+
+// -------- RESPONSIVE -------------
+
+@media screen and (max-width: 1024px) {
+  #experiences {
+    margin-top: 40%;
+    .experience_container {
+      .experience_content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .experience_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    h3 {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.portfolio_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  .portfolio_items {
+    background-color: var(--bg-color);
+    padding: 1rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    &:hover{
+        border-color: var(--primary-color);
+        background-color: transparent;
+        
+    }
+    img{
+        border-radius: 1.5rem;
+        overflow: hidden;
+    }
+    h3{
+        margin: 1.5rem 0 1.5rem;
+    }
+  }
+}
+
+
+
+
+
+// -------- RESPONSIVE -------------
+
+@media screen and (max-width: 1024px) {
+    .portfolio_container{
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .portfolio_container{
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+  }
+  

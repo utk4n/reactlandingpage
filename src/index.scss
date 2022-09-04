@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+}
+:root {
+  /* COLORS  */
+  --bg-color: #2b2f33;
+  --bg-color2: #231f1f;
+  --bg-card: #3b3f42;
+  --shadow-color: #d9dde2;
+  --font-white: #fff;
+  --text-color: #9c9e9f;
+  --text-color2: #fcfdff;
+  --primary-color: #65f1bf;
+
+  /* UNITS */
+
+  --container-width-lg: 75%;
+  --container-width-md: 85%;
+  --container-width-sm: 90%;
+
+  /* TRANSITION */
+
+  --transition: all 400ms ease;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--font-white);
+  line-height: 1.8;
+  background: var(--bg-color2);
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500;
+}
+a {
+  color: var(--primary-color);
+  transition: var(--transition);
+  &:hover {
+    color: var(--font-white);
+  }
+}
+::-webkit-scrollbar {
+  display: none;
+}
+// -------------- STYLES ----------
+.container {
+  width: var(--container-width-lg);
+  margin: 0 auto;
+}
+h1 {
+  font-size: 2.5rem;
+}
+section {
+  margin-top: 8rem;
+
+  h2,
+  h5 {
+    text-align: center;
+    color: var(--text-color2);
+  }
+  h2 {
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+  }
+}
+
+.text-light {
+  color: var(--text-color);
+}
+.text-muted {
+  color: var(--text-color);
+}
+.btn {
+  width: max-content;
+  display: inline-block;
+  color: var(--primary-color);
+  padding: 0.75rem 1.2rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+  &:hover {
+    background-color: var(--font-white);
+    color: var(--bg-color);
+    border-color: transparent;
+  }
+}
+
+.btn_primary {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ----------- RESPONSIVE ---------- */
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--container-width-md);
+  }
+  section {
+    margin-top: 6rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container {
+    width: var(--container-width-sm);
+  }
+  section {
+    h2 {
+      margin-bottom: 2rem;
+    }
+  }
+}
